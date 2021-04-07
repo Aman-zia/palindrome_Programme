@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task7.css">
+    <title>Document</title>
+
+   
+</head>
+<body>
+    <div class="box">
+        <input type=text  id="rev" placeholder="enter the number">
+        <br/>
+        <button type="button" onclick="mypalin()" >submit</button>
+
+    </div>
+    
+</body>
+<script>
+var remainder;
+var reversed=0;
+var number;
+var temp;
+        function mypalin()
+        {
+            number=document.getElementById("rev").value;
+            temp=number;
+             while(number>0)
+                 {
+                     remainder=number%10;
+                     reversed=reversed*10 + remainder;
+                     number=parseInt(number/10);
+                 }
+                 
+               
+             if(temp==reversed)
+             {
+                 document.write("the number is palindrome");
+             }
+             else
+             {
+                  document.write("the number is not palindrome");
+             }
+
+        }
+
+
+
+    </script>
+</html>
